@@ -1,7 +1,8 @@
 from django.conf.urls import url
 
 from . import views
+from BatchCalculator.views import rawMaterialView
 
 urlpatterns = [
-    			url(r'^$', views.index, name='index'),
+    			url(r'raw-materials/$', rawMaterialView.as_view()),
               ]

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Batch Calculator</title>
+</head>
+<body>
+	<h4>Hello. This is batch calculator app</h4>
+	<table>
+	{% for material in object_list %}
+	<tr><td>{{material.materialName}}</td><td>{{material.contentSiO2}}</td><td>{{material.contentAl2O3}}</td><td>{{material.author}}</td></tr>
+	{% endfor %}
+	</table>
+</body>
+</html>
