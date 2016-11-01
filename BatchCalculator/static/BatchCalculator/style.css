@@ -1,0 +1,33 @@
+body{
+	margin: 0 auto;
+	background: #efefef;
+	padding: 0;
+	font: 400 15px/1.8 Arial, sans-serif
+}
+
+
+
+header{
+	background: #555;
+	padding: 10px;
+}
+header h1{
+	color: #fff;
+	margin: 3px;
+}
+.main{
+	padding: 15px;
+}
+table {
+	border-collapse: collapse;
+}
+table, th, td, tr {
+	border: 1px dotted #555555;
+}
+td {
+	padding: 2px 5px;
+}
+
+input{
+	display: block;
+}

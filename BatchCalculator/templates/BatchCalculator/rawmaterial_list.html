@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Batch Calculator</title>
-</head>
-<body>
-	<h4>Hello. This is batch calculator app</h4>
+{% extends "base.html" %}
+    {% block main %}
+	<h4>List of <a href="{% url 'rawmateriallist' %}">raw materials</a></h4>
 	<table>
+	<tr><th>Material Name</th><th>SiO<sub>2</sub></th><th>Al<sub>2</sub>O<sub>3</sub></th><th>Na<sub>2</sub>O</th></tr>
 	{% for material in object_list %}
-	<tr><td>{{material.materialName}}</td><td>{{material.contentSiO2}}</td><td>{{material.contentAl2O3}}</td><td>{{material.author}}</td></tr>
+	<tr><td>{{material.materialName}}</td><td>{{material.contentSiO2}}</td><td>{{material.contentAl2O3}}</td><td>{{material.contentNa2O}}</td></tr>
 	{% endfor %}
 	</table>
-</body>
-</html>
+	{% endblock %}
