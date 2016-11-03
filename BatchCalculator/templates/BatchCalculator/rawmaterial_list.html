@@ -1,10 +1,22 @@
 {% extends "base.html" %}
-    {% block main %}
-	<h4>List of <a href="{% url 'rawmateriallist' %}">raw materials</a></h4>
+    {% block content %}
 	<table>
-	<tr><th>Material Name</th><th>SiO<sub>2</sub></th><th>Al<sub>2</sub>O<sub>3</sub></th><th>Na<sub>2</sub>O</th></tr>
+	<tr>
+		<th>Material Name</th>
+		<th>SiO<sub>2</sub></th>
+		<th>Al<sub>2</sub>O<sub>3</sub></th>
+		<th>Na<sub>2</sub>O</th>
+		<th>K<sub>2</sub>O</th>
+		</tr>
 	{% for material in object_list %}
-	<tr><td>{{material.materialName}}</td><td>{{material.contentSiO2}}</td><td>{{material.contentAl2O3}}</td><td>{{material.contentNa2O}}</td></tr>
+	<tr>
+	    <td>{{material.materialName}}</td>
+	    <td>{{material.contentSiO2}}</td>
+	    <td>{{material.contentAl2O3}}</td>
+	    <td>{{material.contentNa2O}}</td>
+	    <td>{{material.contentK2O}}</td>
+	    <td><button><a href="/edit/{{material.id}}">Edit</a></button><button><a href="/delete/{{material.id}}">Delete</a></button></td>
+	    </tr>
 	{% endfor %}
 	</table>
 	{% endblock %}

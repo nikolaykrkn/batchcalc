@@ -1,0 +1,64 @@
+body{
+	margin: 0 auto;
+	background: #efefef;
+	padding: 0;
+	font: 400 15px/1.8 Arial, sans-serif;
+}
+
+header{
+	background: #555;
+	padding: 10px;
+	font-family: Courier, sans-serif;
+	line-height: 0.8;
+}
+
+header a{
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	background: #333;
+	padding: 3px 10px;
+}
+header h1{
+	color: #fff;
+	margin: 10px 0;
+	text-align: center;
+	display: inline-block;
+	min-width: 100%;
+}
+
+header h1 a{
+	background: none;
+}
+
+.main{
+	padding: 15px;
+}
+table {
+	border-collapse: collapse;
+}
+th, td{
+	border: 1px dotted #555555;
+}
+tr>td:last-of-type{
+	border: none;
+}
+td {
+	padding: 2px 5px;
+}
+
+
+.content{
+	margin: 10px;
+}
+
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+label{
+	display: inline-block;
+	width: 30%;
+}

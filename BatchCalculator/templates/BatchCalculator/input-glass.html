@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headscripts %}
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<p>Select your glass composition:</p>
+<form action="" method="GET" class='glassComposition'>
+	
+	
+
+	<div><input type="submit"></div>
+</form>
+
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+<script
+  src="{% static 'BatchCalculator/js/glass_input.js' %}">
+</script>
+{% endblock %}

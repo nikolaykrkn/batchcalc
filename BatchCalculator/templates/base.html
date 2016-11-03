@@ -2,26 +2,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{% static 'BatchCalculator/style.css' %}">
+    <link rel="stylesheet" href="{% static 'BatchCalculator/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'BatchCalculator/css/style.css' %}">
+    {% block headscripts %}
+	{% endblock %}
 	<meta charset="UTF-8">
-	<title>Batch Calculator</title>
+	<title>Glass Batch Calculator</title>
 </head>
 <body>
-    {% block header %}
+    
 	<header>
-	   <h1> Batch Calculator </h1>
+		{% block header %}
+		<h1><a href = '/'>Glass Batch Calculator</h1></a>
+    	<div class='menu'>
+    		<a href="{% url 'rawmateriallist' %}">raw materials</a>
+    		<a href="{% url 'addmateriallist' %}">add raw material</a>
+    		<a href="{% url 'calculate' %}">calculate batch</a>
+    	</div>
+	   {% endblock %} 
 	</header>
-	{% endblock %}
-	{% block main %}
-	<main>
 
-	</main>
-	{% endblock %}
+	<div class='content'>
+    {% block content %}
+    <h1> hello world, this is batchcalculator </h1>
+    {% endblock %}
+	</div>
+	
 	{% block footer %}
 	<footer>
+	
+	<p>2016 &copy; Nikolay Kuriakin</p>
 	
 	</footer>
 	{% endblock %}
 
+	{% block scripts %}
+	{% endblock %}
 </body>
 </html>
