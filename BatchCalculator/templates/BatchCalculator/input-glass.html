@@ -4,7 +4,11 @@
 <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+</script>
+<script
+	src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.7.0/math.js">
+</script>
 {% endblock %}
 
 
@@ -12,21 +16,29 @@
 
 
 {% block content %}
-<p>Select your glass composition:</p>
-<form action="" method="GET" class='glassComposition'>
+<form action="" id="inputToCalc" onsubmit="return false">
 	
-	
+	<p class="glassComposition">Select your glass composition and raw materials which introduce each component:</p>
+	<div class = "addElem">Add oxide</div>
+	<div><input type="submit" value="Calculate"></div>
 
-	<div><input type="submit"></div>
 </form>
 
+<h2>Batch formulation:</h2>
+<table id = 'results'>
 
-
+</table>
 
 
 {% endblock %}
 
 {% block scripts %}
+
+<script>
+	var oxides = {{oxides|safe}};
+	var mats =[{% for mat in materials%} {{mat|safe}}, {% endfor %}]
+</script>
+
 <script
   src="{% static 'BatchCalculator/js/glass_input.js' %}">
 </script>

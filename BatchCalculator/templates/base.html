@@ -16,8 +16,13 @@
 		<h1><a href = '/'>Glass Batch Calculator</h1></a>
     	<div class='menu'>
     		<a href="{% url 'rawmateriallist' %}">raw materials</a>
-    		<a href="{% url 'addmateriallist' %}">add raw material</a>
-    		<a href="{% url 'calculate' %}">calculate batch</a>
+    		<a href="{% url 'calculate' %}">glass batch</a>
+    		{% if user.is_anonymous %}
+    		<a href="{% url 'login' %}">login</a>
+    		{% else %}
+    		<p>Welcome, {{user.username}}!</p>
+    		{% endif %}
+
     	</div>
 	   {% endblock %} 
 	</header>

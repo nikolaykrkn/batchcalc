@@ -2,7 +2,8 @@
 
 {% block content %}
 <form action="" method="POST">{% csrf_token %}
-{{form.as_p}}
-<input type="submit" value="Update">
-	</form>
+	{{form.as_p}}
+	<input type="submit" value="Update">
+</form>
+<a href="{% url 'addmateriallist' %}">add raw material</a>
 {%endblock%}
