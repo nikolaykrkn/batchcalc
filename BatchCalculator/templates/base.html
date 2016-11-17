@@ -18,8 +18,10 @@
     		<a href="{% url 'rawmateriallist' %}">raw materials</a>
     		<a href="{% url 'calculate' %}">glass batch</a>
     		{% if user.is_anonymous %}
-    		<a href="{% url 'login' %}">login</a>
-    		<a href="{% url 'register' %}">register</a>
+    		<div class='account'>
+    			<a href="{% url 'login' %}">login</a>
+    			<a href="{% url 'register' %}">register</a>
+    		</div>
     		{% else %}
     		<p>Welcome, {{user.username}}!</p> <a href="{% url 'logout' %}">log out</a>
     		{% endif %}

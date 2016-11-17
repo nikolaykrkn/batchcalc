@@ -2,7 +2,7 @@ body{
 	margin: 0 auto;
 	background: #efefef;
 	padding: 0;
-	font: 400 15px/1.8 Arial, sans-serif;
+	font: 400 20px/1.8 Arial, sans-serif;
 }
 
 header{
@@ -10,6 +10,7 @@ header{
 	padding: 10px;
 	font-family: Courier, sans-serif;
 	line-height: 0.8;
+	
 }
 a{
 		display: inline-block;
@@ -18,6 +19,7 @@ a{
 header a{
 	display: inline-block;
 	color: white;
+	font-size 0.6em;
 
 	background: #333;
 	padding: 3px 10px;
@@ -32,6 +34,15 @@ header h1{
 
 header h1 a{
 	background: none;
+}
+.menu{
+	padding: 15px;
+	position: relative;
+}
+.account{
+	display: inline-block;
+	position: absolute;
+	right: 0;
 }
 
 .content{
@@ -70,8 +81,13 @@ td {
 	cursor: pointer;
 }
 
-footer p{
+footer > p{
 	margin: 0;
+	position: absolute;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	top: 50%;
+
 }
 
 label{
@@ -112,4 +128,14 @@ footer, .content:after {
 }
 footer {
   background: white;
+  position: relative;
+}
+@media (max-width: 600px) {
+	header{
+		height: 200px;
+	}
+  .account {
+    display: block;
+    padding: 20px;
+  }
 }
