@@ -19,8 +19,9 @@
     		<a href="{% url 'calculate' %}">glass batch</a>
     		{% if user.is_anonymous %}
     		<a href="{% url 'login' %}">login</a>
+    		<a href="{% url 'register' %}">register</a>
     		{% else %}
-    		<p>Welcome, {{user.username}}!</p>
+    		<p>Welcome, {{user.username}}!</p> <a href="{% url 'logout' %}">log out</a>
     		{% endif %}
 
     	</div>

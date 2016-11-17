@@ -25,19 +25,20 @@ SECRET_KEY = '_x9&g_&q#989hcf-=b9ftu(0+$khp1x5_ujz73jo*($7mx07=^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nikolaykrkn.pythonanywhere.com']
 
+LOGIN_REDIRECT_URL = '/'
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BatchCalculator.apps.BatchcalculatorConfig',
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [

@@ -12,4 +12,6 @@ urlpatterns = [
 				url(r'^glass-composition/$', views.calculator, name='calculate'),
 				url(r'^accounts/login/$', auth_views.login, name='login'),
 				url(r'^accounts/logout/$', auth_views.logout, name='logout'),
+				url(r'^register/', views.registerUser.as_view(), name='register'),
+
               ]

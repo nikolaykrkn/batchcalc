@@ -36,7 +36,10 @@ header h1 a{
 
 .content{
 	padding: 15px;
-	min-height: 90%
+}
+
+span.helptext{
+	display: none;
 }
 table {
 	border-collapse: collapse;
@@ -67,13 +70,46 @@ td {
 	cursor: pointer;
 }
 
-
-footer{
-	position: relative;
-	bottom: 0;
+footer p{
+	margin: 0;
 }
 
 label{
+	display: block;
+	width: 30%;
+}
+
+form.material label{
 	display: inline-block;
 	width: 30%;
+}
+
+ul.errorlist{
+	color:red;
+	background: white;
+	position:fixed;
+	width: 50%;
+	right: 0;
+}
+
+/*sticky footer*/
+
+html, body {
+    height: 100%;
+}
+.content {
+  min-height: 90%;
+  /* equal to footer height */
+    margin-bottom: -100px; 
+}
+.content:after {
+  content: "";
+  display: block;
+}
+footer, .content:after {
+  /* .push must be the same height as footer */
+    height: 100px; 
+}
+footer {
+  background: white;
 }
