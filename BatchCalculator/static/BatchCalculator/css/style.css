@@ -68,8 +68,6 @@ table {
 }
 th, td{
 	border: 1px dotted #555;
-	word-wrap: break-word;
-	width: 15px;
 }
 /*tr>td:last-of-type{
 	border: none;
