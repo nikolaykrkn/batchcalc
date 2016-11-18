@@ -16,14 +16,14 @@
 		<h1><a href = '/'>Glass Batch Calculator</h1></a>
     	<div class='menu'>
     		<a href="{% url 'rawmateriallist' %}">raw materials</a>
-    		<a href="{% url 'calculate' %}">glass batch</a>
+    		<a href="{% url 'calculate' %}">calculate batch</a>
     		{% if user.is_anonymous %}
     		<div class='account'>
     			<a href="{% url 'login' %}">login</a>
     			<a href="{% url 'register' %}">register</a>
     		</div>
     		{% else %}
-    		<p>Welcome, {{user.username}}!</p> <a href="{% url 'logout' %}">log out</a>
+    		<p class='account'>Welcome, {{user.username}}! <a href="{% url 'logout' %}">log out</a></p> 
     		{% endif %}
 
     	</div>
@@ -32,7 +32,12 @@
 
 	<div class='content'>
     {% block content %}
-    <h1> hello world, this is batchcalculator </h1>
+    <h1> Glass/Ceramics Batch calculator </h1>
+    <ul>
+    <li>Calculate batches of refractory nonmetallic silicate materials i.e glasses, vitreous enamels, glazes, porcelain and other types of ceramics</li>
+    <li>Store your own set of raw materials in the database.</li>
+    <li>Obtain the proportions to get the required amount of material or batch according to the capacity of your crucible.
+    </ul>
     {% endblock %}
 	</div>
 	

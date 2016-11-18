@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{request.user.id}}
+{% if request.user.id == object.author.id %}
+<form action="" method="POST" class="material">{% csrf_token %}
+	{{form.as_p}}
+	<input type="submit" name="Update">
+</form>
+{% else %}
+<p>You cannot edit this material</p>
+{%endif%}
+{%endblock%}
