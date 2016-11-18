@@ -18,7 +18,7 @@ class rawMaterial(models.Model):
     contentTiO2 = models.FloatField('Content of TiO2', default=0.0)
     contentZrO2 = models.FloatField('Content of ZrO2', default=0.0)
     contentB2O3 = models.FloatField('Content of B2O3', default=0.0)
-    contentP2O3 = models.FloatField('Content of P2O5', default=0.0)
+    contentP2O5 = models.FloatField('Content of P2O5', default=0.0)
     contentZnO = models.FloatField('Content of ZnO', default=0.0)
     contentF = models.FloatField('Content of F', default=0.0)
     contentMnO = models.FloatField('Content of MnO', default=0.0)

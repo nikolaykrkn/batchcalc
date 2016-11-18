@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'BatchCalculator.apps.BatchcalculatorConfig',
     'django.contrib.admin',
+    'analytical',
 ]
+CLICKY_SITE_ID = '101004645'
+#CRAZY_EGG_ACCOUNT_NUMBER = 'xxxxxxxx'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

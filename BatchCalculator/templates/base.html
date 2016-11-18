@@ -1,15 +1,20 @@
+{% load analytical %}
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	{% analytical_head_top %}
     <link rel="stylesheet" href="{% static 'BatchCalculator/css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'BatchCalculator/css/style.css' %}">
     {% block headscripts %}
 	{% endblock %}
 	<meta charset="UTF-8">
 	<title>Glass Batch Calculator</title>
+	{% analytical_head_bottom %}
 </head>
 <body>
+	{% analytical_body_top %}
     
 	<header>
 		{% block header %}
@@ -51,5 +56,6 @@
 
 	{% block scripts %}
 	{% endblock %}
+	{% analytical_body_bottom %}
 </body>
 </html>
